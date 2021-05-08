@@ -13,12 +13,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         // Set button click listeners
-        binding.buttonTodoist.setOnClickListener{ buttonLog(binding.buttonTodoist) }
-        binding.buttonAsana.setOnClickListener{ buttonLog(binding.buttonAsana) }
+        binding.buttonTodoist.setOnClickListener{ buttonLog(Service.TODOIST) }
+        binding.buttonAsana.setOnClickListener{ buttonLog(Service.ASANA) }
     }
 
-    private fun buttonLog(button: android.widget.Button) {
+    private fun buttonLog(service: Service) {
         // Print button input to console log
+        println("${service.prettyName}: ${binding.entryField.text}")
+        binding.entryField.text.clear()
     }
 
+}
+
+enum class Service(val prettyName: String) {
+    TODOIST("Todoist"),
+    ASANA("Asana"),
+    ROAM("Roam")
 }
