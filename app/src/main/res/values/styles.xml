@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.QuickEntry.Button.Source" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">12dp</item>
+        <item name="iconSize">19dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">15dp</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="backgroundTint">?attr/colorSecondary</item>
+    </style>
+</resources>

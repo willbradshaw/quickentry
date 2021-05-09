@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private fun buttonLog(service: Service) {
         // Print button input to console log
         println("${service.prettyName}: ${binding.entryField.text}")
-        binding.entryField.text.clear()
+        binding.entryField.text?.clear()
     }
 
 }
